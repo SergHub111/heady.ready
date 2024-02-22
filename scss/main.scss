@@ -1,0 +1,28 @@
+@import "./fonts";
+@import "./vars";
+@import "./container_center";
+@import "./mixins";
+@import "./header";
+@import "./poster";
+
+
+ *, ul, li, a, p{
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    &::selection{
+        background-color: rgb(221, 220, 220);
+
+    }
+}
+
+body{
+    color: $main-color;
+    font-family: 'Jost', sans-serif;
+    background-color: #5e5e5e;
+}
+

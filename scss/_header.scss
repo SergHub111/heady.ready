@@ -1,0 +1,87 @@
+.header{
+   color: black;
+   display: grid;
+   grid-template-columns: 3fr auto 3fr;
+   border: 1px solid black;
+   border-style: none none solid none;
+
+   @include media($tablet){
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+   }
+
+   &__logo{
+      font-size: 32px;
+      padding: 0 0 0 15px;
+      line-height: 1;
+      align-self: center;
+
+      @include media($notebook){
+         font-size: 24px;
+      } 
+      @include media($sm-phone){
+         line-height: 1.5;
+         align-self: end;
+    }
+   }
+
+   &__subtext{
+      text-align: end;
+      align-self: end;
+      font-size: 18px;
+      padding: 0 15px 0 0;
+
+      span{
+         letter-spacing: 3px;
+      }
+
+      @include media($notebook){
+         font-size: 16px;
+      }
+      @include media($tablet){
+         display: none;
+      }
+
+   }
+
+   &__links{
+    display: flex;
+
+    @include media($sm-phone){
+         display: none;
+    }
+
+
+
+    &-item{
+        display: inline-block;
+        font-size: 22px;
+        letter-spacing: 2px;
+        padding: 5px 35px;
+        border: 1px solid black;
+        border-style: none none none solid;
+
+        @include media($notebook){
+         font-size: 16px;
+         }
+        @include media($notebook){
+            padding: 5px 25px;
+         } 
+      
+        &:active,
+        &:hover{
+         color: $sub-color;
+        }
+
+   }
+   
+      :last-child{
+      :last-child{
+         border-style: none solid none solid;
+      }
+      }
+   }
+
+}
+
+

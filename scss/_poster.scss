@@ -1,0 +1,75 @@
+.poster{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 50px 50px 100px;
+
+    @include media($notebook){
+        justify-content: end;
+    }
+    @include media($phone){
+        padding: 0px;   
+    }
+
+    &__textbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        z-index: 1;
+
+        @include media($notebook){
+            position: absolute;
+            max-width: 850px;
+            left: 50px;
+            align-self: center;
+        }
+        @include media($phone){
+            left: 30px;
+        }
+    }
+
+    &__title{
+        position: relative;
+        display: block;
+        line-height: 85px;
+        letter-spacing: 5px;
+        align-self: center;
+        text-align: left;
+        font-size: 104px;
+        font-weight: normal;
+        margin-bottom: 20px;
+
+        @include media($notebook){
+            font-size: 85px;
+            max-width: 850px;
+            line-height: 70px;
+        }
+        @include media($phone){
+            font-size: 68px;
+        }
+    }
+
+    &__title-sublink{
+        padding-left: 5px;
+
+        &::after{
+            content: '---->';
+            margin-left: 5px;
+            text-align: center;
+            align-self: center;
+        }
+    }
+
+    &__image{
+        display: block;
+        max-width: 488px;
+        max-height: 578px;
+        filter: drop-shadow(3px 3px 3px rgb(133, 133, 133));
+        z-index: 0;
+
+        @include media($sm-phone){
+            width: 100%;
+        }
+    }
+}
