@@ -48,9 +48,20 @@
     display: flex;
 
     @include media($sm-phone){
-         display: none;
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         overflow: hidden;
+         flex-direction: column;
+         align-self: start;
+         padding-top: 20px;
+         z-index: 5;
+         background-color: rgb(255, 255, 255);
+         transition: all 1s;
+         transform: translateX(-112%);
     }
-
 
 
     &-item{
@@ -67,6 +78,11 @@
         @include media($notebook){
             padding: 5px 25px;
          } 
+        @include media($sm-phone){
+         border: none;
+         border-style: none;
+         font-size: 22px;
+        }
       
         &:active,
         &:hover{
@@ -75,13 +91,36 @@
 
    }
    
-      :last-child{
-      :last-child{
+      :last-of-type{
+      :last-of-type{
          border-style: none solid none solid;
+         @include media($sm-phone){
+            border-style: none;
+         }
       }
       }
    }
 
+   &__burger-btn-open{
+      display: none;
+
+      @include media($sm-phone){
+         display: block;
+         
+      }
+   }
+
+   &__burger-btn-close{
+      display: none;
+
+      @include media($sm-phone){
+         position: absolute;
+         display: block;
+         right: 0;
+         padding-right: 10px;
+      }
+   }
 }
+
 
 
