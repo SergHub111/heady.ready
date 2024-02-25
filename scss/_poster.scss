@@ -3,12 +3,17 @@
     display: flex;
     justify-content: space-around;
     padding: 50px 50px 50px 100px;
+    margin-bottom: 150px;
 
     @include media($notebook){
         justify-content: end;
     }
+    @include media($tablet){
+        margin-bottom: 20px;
+    }
     @include media($phone){
         padding: 0px;   
+        margin-bottom: 5px;
     }
 
     &__textbox{

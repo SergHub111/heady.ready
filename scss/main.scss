@@ -5,9 +5,10 @@
 @import "./header";
 @import "./poster";
 @import "./burger";
+@import "./catalog";
 
 
- *, ul, li, a, p{
+ *, ul, li, a, p, span{
     color: inherit;
     margin: 0;
     padding: 0;
