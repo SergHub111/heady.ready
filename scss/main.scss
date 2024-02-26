@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "./fonts";
 @import "./vars";
 @import "./container_center";
@@ -8,16 +7,6 @@
 @import "./burger";
 @import "./catalog";
 @import "./slide";
-=======
-@import './fonts';
-@import './vars';
-@import './container_center';
-@import './mixins';
-@import './header';
-@import './poster';
-@import './burger';
-@import './catalog';
->>>>>>> 2ed9ae967ee9568f35cf0280fbc499f55884991e
 
 *,
 ul,
@@ -31,8 +20,8 @@ span {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
 
-<<<<<<< HEAD
  *, ul, li, a, p, h2, h3, span{
     color: inherit;
     margin: 0;
@@ -45,11 +34,6 @@ span {
         background-color: rgb(221, 220, 220);
 
     }
-=======
-  &::selection {
-    background-color: rgb(221, 220, 220);
-  }
->>>>>>> 2ed9ae967ee9568f35cf0280fbc499f55884991e
 }
 
 body {
