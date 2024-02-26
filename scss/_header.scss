@@ -1,126 +1,140 @@
-.header{
-   color: black;
-   display: grid;
-   grid-template-columns: 3fr auto 3fr;
-   border: 1px solid black;
-   border-style: none none solid none;
+.header {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 3fr auto 3fr;
+  border: 1px solid black;
+  border-style: none none solid none;
 
-   @include media($tablet){
-      grid-template-columns: auto auto;
-      justify-content: space-between;
-   }
+  @include media($tablet) {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
 
-   &__logo{
-      font-size: 32px;
-      padding: 0 0 0 15px;
-      line-height: 1;
-      align-self: center;
+  @include media($sm-phone) {
+    position: fixed;
+    width: 100%;
+  }
 
-      @include media($notebook){
-         font-size: 24px;
-      } 
-      @include media($sm-phone){
-         line-height: 1.5;
-         align-self: end;
+  &__logo {
+    font-size: 32px;
+    padding: 0 0 0 15px;
+    line-height: 1;
+    align-self: center;
+
+    @include media($notebook) {
+      font-size: 24px;
     }
-   }
-
-   &__subtext{
-      text-align: end;
+    @include media($sm-phone) {
+      line-height: 1.5;
       align-self: end;
-      font-size: 18px;
-      padding: 0 15px 0 0;
+    }
+  }
 
-      span{
-         letter-spacing: 3px;
-      }
+  &__subtext {
+    text-align: end;
+    align-self: end;
+    font-size: 18px;
+    padding: 0 15px 0 0;
 
-      @include media($notebook){
-         font-size: 16px;
-      }
-      @include media($tablet){
-         display: none;
-      }
+    span {
+      letter-spacing: 3px;
+    }
 
-   }
+    @include media($notebook) {
+      font-size: 16px;
+    }
+    @include media($tablet) {
+      display: none;
+    }
+  }
 
-   &__links{
+  &__links {
     display: flex;
 
-    @include media($sm-phone){
-         position: absolute;
-         left: 0;
-         right: 0;
-         top: 0;
-         bottom: 0;
-         overflow: hidden;
-         flex-direction: column;
-         align-self: start;
-         padding-top: 20px;
-         z-index: 5;
-         background-color: rgb(255, 255, 255);
-         transition: all 1s;
-         transform: translateX(-112%);
+    @include media($sm-phone) {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      // width: 100%;
+      // height: 100%;
+      // overflow: hidden;
+      flex-direction: column;
+      align-self: start;
+      padding-top: 20px;
+      z-index: 5;
+      background-color: rgb(255, 255, 255);
+      transition: all 1s;
+      transform: translateX(-112%);
+
+      &::after {
+        position: absolute;
+        top: 0;
+        min-height: 100vh;
+        width: 100%;
+        content: '';
+        background-color: #fff;
+      }
     }
 
+    &-item {
+      display: inline-block;
+      font-size: 22px;
+      letter-spacing: 2px;
+      padding: 5px 35px;
+      border: 1px solid black;
+      border-style: none none none solid;
 
-    &-item{
-        display: inline-block;
+      @include media($notebook) {
+        font-size: 16px;
+      }
+      @include media($notebook) {
+        padding: 5px 25px;
+      }
+      @include media($sm-phone) {
+        position: relative;
+        border: none;
+        border-style: none;
         font-size: 22px;
-        letter-spacing: 2px;
-        padding: 5px 35px;
-        border: 1px solid black;
-        border-style: none none none solid;
+        z-index: 5;
+      }
 
-        @include media($notebook){
-         font-size: 16px;
-         }
-        @include media($notebook){
-            padding: 5px 25px;
-         } 
-        @include media($sm-phone){
-         border: none;
-         border-style: none;
-         font-size: 22px;
+      &:active,
+      &:hover {
+        color: $sub-color;
+      }
+    }
+
+    :last-of-type {
+      :last-of-type {
+        border-style: none solid none solid;
+        @include media($sm-phone) {
+          border-style: none;
         }
-      
-        &:active,
-        &:hover{
-         color: $sub-color;
-        }
-
-   }
-   
-      :last-of-type{
-      :last-of-type{
-         border-style: none solid none solid;
-         @include media($sm-phone){
-            border-style: none;
-         }
       }
-      }
-   }
+    }
+  }
 
-   &__burger-btn-open{
-      display: none;
+  &__burger-btn-open {
+    display: none;
 
-      @include media($sm-phone){
-         display: block;
-         
-      }
-   }
+    @include media($sm-phone) {
+      display: block;
+    }
+  }
 
-   &__burger-btn-close{
-      display: none;
+  &__burger-btn-close {
+    display: none;
 
-      @include media($sm-phone){
-         position: absolute;
-         display: block;
-         right: 0;
-         padding-right: 10px;
-      }
-   }
+    @include media($sm-phone) {
+      position: absolute;
+      display: block;
+      right: 0;
+      padding-right: 10px;
+    }
+  }
 }
-
-
-
