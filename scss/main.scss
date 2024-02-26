@@ -6,9 +6,10 @@
 @import "./poster";
 @import "./burger";
 @import "./catalog";
+@import "./slide";
 
 
- *, ul, li, a, p, span{
+ *, ul, li, a, p, h2, h3, span{
     color: inherit;
     margin: 0;
     padding: 0;

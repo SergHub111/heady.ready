@@ -1,8 +1,9 @@
 .catalog {
   display: grid;
   grid-template-columns: 6fr 6fr;
+  margin-bottom: 50px;
 
-  @include media($tablet){
+  @include media($phone){
     grid-template-columns: 12fr;
   }
 
