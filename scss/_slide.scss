@@ -1,62 +1,63 @@
-.product-slider{
-    // background-color: rgb(113, 133, 94);
-    margin-bottom: 100px;
+.product-slider {
+  // background-color: rgb(113, 133, 94);
+  //   margin-bottom: 100px;
 
-    &__header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 10px;
-        border-bottom: solid black 1px ;
-        margin-bottom: 20px;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: solid black 1px;
+    margin-bottom: 20px;
 
-        h2{
-            font-size: 50px;
-            line-height: 1;
-            font-weight: normal;
-        }
-        p{
-            font-size: 14px;
-            align-self: end;
+    h2 {
+      font-size: 50px;
+      line-height: 1;
+      font-weight: normal;
+    }
+    p {
+      font-size: 14px;
+      align-self: end;
 
-            @include media($sm-phone){
-                display: none;
-            }
-        }
+      @include media($sm-phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  &__item {
+    // background-color: rgb(245, 174, 174);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 90%;
+      margin-bottom: 20px;
     }
 
-    &__box{
-        display: flex;
+    &-title {
+      line-height: 1;
+      font-size: 18px;
     }
 
-    &__item{
-        // background-color: rgb(245, 174, 174);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-            img{
-                width: 90%;
-                margin-bottom: 20px;
-            }
-
-            &-title{
-                line-height: 1;
-                font-size: 18px;
-            }
-
-            &-price{
-                position: relative;
-                font-size: 16px;
-                &::before{
-                    content: '₴';
-                    font-size: 12px;
-                    position: absolute;
-                    width: 100%;
-                    top: 50%;
-                    left: 5px;
-                    transform: translate(-50%,-50%);
-                }
-            }
+    &-price {
+      position: relative;
+      font-size: 16px;
+      &::before {
+        content: '₴';
+        font-size: 12px;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 5px;
+        transform: translate(-50%, -50%);
+      }
     }
+  }
 }
