@@ -21,4 +21,3 @@ const swiperParams = {
 };
 
 Object.assign(swiperBox, swiperParams);
-swiperBox.initialize();
