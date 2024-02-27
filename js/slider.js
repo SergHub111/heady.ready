@@ -15,9 +15,9 @@ const swiperParams = {
       slidesPerView: 3,
     },
   },
-  // autoplay: {
-  //   delay: 3500,
-  // },
+  autoplay: {
+    delay: 3500,
+  },
 };
 
 Object.assign(swiperBox, swiperParams);
