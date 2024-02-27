@@ -1,19 +1,24 @@
-let mediaSmPhone = 500;
-let mediaPhone = 576;
-let mediaTablet = 768;
-let mediaNotebook = 992;
-let mediaDesctop = 1200;
+let swiperBox = document.querySelector('.product-slider__box');
 
-let windowInnerWidth = window.innerWidth
+const swiperParams = {
+  loop: true,
+  speed: 1000,
+  slidesPerView: 3,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
+  autoplay: {
+    delay: 2500,
+  },
+};
 
-let slider = document.querySelector('.product-slider__box')
-
-if(windowInnerWidth <= mediaNotebook ){
-    console.log('its desc')
-    slider.setAttribute( 'slides-per-view', 2 );
-}
-
-if(windowInnerWidth <= mediaPhone ){
-    console.log('its desc')
-    slider.setAttribute( 'slides-per-view', 1 );
-}
+Object.assign(swiperBox, swiperParams);
+swiperBox.initialize();
