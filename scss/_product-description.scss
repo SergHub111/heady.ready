@@ -59,6 +59,10 @@
             text-transform: uppercase;
             padding: 30px 70px;
             background-color: #FFBCBC;
+            transition: all 0.5s;
+            &:hover{
+                filter: brightness(0.8);
+              }
         }
     } 
 }

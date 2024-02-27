@@ -30,14 +30,44 @@
   }
 
   &__item {
-    // background-color: rgb(245, 174, 174);
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    
+    &-hover{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      transition: all 5s;
+
+      a{
+        font-size: 18px;
+        font-weight: normal;
+        padding: 15px 20px;
+        background-color: #FFBCBC;
+        transition: all 0.5s;
+        &:hover{
+          filter: brightness(0.8);
+        }
+      }
+    }
+    &:hover .product-slider__item-hover{
+      display: flex;
+      
+    }
+    &:hover img{
+      filter: brightness(0.5)
+    }
 
     img {
+      position: relative;
       width: 90%;
       margin-bottom: 20px;
+      transition: all 0.7s;
     }
 
     &-title {
