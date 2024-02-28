@@ -16,7 +16,7 @@ const swiperParams = {
     },
   },
   autoplay: {
-    delay: 3500,
+    delay: 5000,
   },
 };
 
