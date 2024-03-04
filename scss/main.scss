@@ -9,6 +9,7 @@
 @import "./slide";
 @import "./product-description";
 @import "./modal";
+@import "./about-us";
 
 *,
 ul,
@@ -36,6 +37,13 @@ span {
         background-color: rgb(221, 220, 220);
 
     }
+}
+
+h2{
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 30px;
 }
 
 body {

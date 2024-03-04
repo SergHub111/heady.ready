@@ -1,0 +1,46 @@
+.about-us{
+    display: flex;
+    justify-content: center;
+    padding: 70px 10px;
+
+    @include media($tablet){
+        padding: 50px 10px;
+    }
+
+    @include media(632px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    &__data{
+        max-width: 470px;
+        @include media(632px){
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        &-title{
+            margin-bottom: 20px;
+        }
+
+        &-text{
+            font-size: 20px;    
+        }
+    }
+
+    &__img{
+        display: block;
+        max-width: 300px;
+        margin-left: 70px;
+
+        @include media($tablet){
+            margin-left: 20px;
+        }
+
+        @include media(632px){
+            margin-left: 0;
+        }
+    }
+}

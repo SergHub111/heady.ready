@@ -14,7 +14,6 @@ openModalBtn.forEach(elem => {
   
 
     closeModalBtn.addEventListener("click", function () {
-        // modal.style.display = "none";
         modal.style = `
             opacity: 0;
             z-index: -1;
@@ -23,7 +22,6 @@ openModalBtn.forEach(elem => {
 
     window.addEventListener("click", function (event) {
         if (event.target == modal) {
-            // modal.style.display = "none";
             modal.style = `
                 opacity: 0;
                 z-index: -1;
