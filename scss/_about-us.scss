@@ -42,5 +42,9 @@
         @include media(632px){
             margin-left: 0;
         }
+
+        @include media($phone){
+            width: 100%;
+        }
     }
 }
