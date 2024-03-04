@@ -1,0 +1,131 @@
+.footer{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: #AABAD0;
+    font-size: 16px;
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 150px;
+        border-bottom: 2px solid #000;
+        
+        @include media($notebook){
+            padding: 20px 30px;
+        }
+
+        &-logo{
+            font-size: 32px;
+        }
+
+        &-subtext{
+            align-self: center;
+        }
+    }
+
+    &__data{
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        padding: 30px 150px;
+
+        @include media($notebook){
+            padding: 30px ;
+        }
+        @include media($tablet){
+            padding: 30px 15px;
+            grid-template-columns: 12fr;
+        }
+
+        @include media($sm-phone){
+            padding: 30px 5px;
+        }
+    }
+
+    &__nav{
+        // background-color: #e1f37a;
+        padding-right: 30px;
+
+        @include media($tablet){
+           margin-bottom: 20px;
+           padding-right: 0;
+        }
+
+        &_faq{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            &-item{
+                line-height: 1.7;
+
+                span{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                a{
+                    display: block;
+                }
+            }
+        }
+
+        &_design{
+            margin-bottom: 30px;
+        }
+        
+        &_copywrite{
+            font-size: 14px;
+        }
+    }
+
+    &__social{
+        border-left: 1px solid #000;
+        padding: 0 30px;
+
+        @include media($tablet){
+           border-left: none;
+           border-top: 1px solid #000;
+           padding: 30px 0;
+        }
+
+        &-title{
+            padding-bottom: 30px;
+            border-bottom: 1px solid #000;
+
+            @include media($tablet){
+                padding-bottom: 0;
+                border-bottom: none;
+             }
+        }
+
+        &-contacts{
+            line-height: 2 ;
+            padding-top: 30px;
+
+            @include media($tablet){
+                a{
+                    display: block;
+                }
+             }
+        }
+
+        &-media{
+            display: flex;
+            justify-content: space-between;
+            // align-items: end;
+
+            @include media($tablet){
+                flex-direction: column;
+                a{
+                    display: inline-block;
+                }
+             }
+
+            a {
+                img{
+                    width: 17px;
+                }
+            }
+        }
+    }
+}
