@@ -44,7 +44,6 @@
     }
 
     &__nav{
-        // background-color: #e1f37a;
         padding-right: 30px;
 
         @include media($tablet){
@@ -99,7 +98,7 @@
         }
 
         &-contacts{
-            line-height: 2 ;
+            line-height: 2;
             padding-top: 30px;
 
             @include media($tablet){
@@ -112,7 +111,6 @@
         &-media{
             display: flex;
             justify-content: space-between;
-            // align-items: end;
 
             @include media($tablet){
                 flex-direction: column;
