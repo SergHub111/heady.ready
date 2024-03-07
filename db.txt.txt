@@ -1,0 +1,2 @@
+start server: 
+ json-server -w db.json

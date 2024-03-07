@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "userName": "Bob",
+      "age": 22,
+      "id": "c412"
+    },
+    {
+      "id": "8f83",
+      "userName": "Vitalii",
+      "age": "25"
+    },
+    {
+      "id": "9a6e",
+      "userName": "",
+      "age": ""
+    },
+    {
+      "id": "0dbf",
+      "name": "Veer-Mar",
+      "tel": "+380(99)999-99-99"
+    }
+  ]
+}
